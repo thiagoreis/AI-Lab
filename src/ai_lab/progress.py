@@ -333,9 +333,32 @@ def replace_block(document: str, block: str) -> str:
     return document[:start] + block + document[end + len(END_MARKER) :]
 
 
-def write_markdown(p: Progress, md_path: Path, today: date) -> None:
-    # UTF-8 e LF explícitos: no Windows o padrão seria cp1252 e CRLF.
-    document = md_path.read_text(encoding="utf-8")
-    md_path.write_text(
-        replace_block(document, render_markdown(p, today)), encoding="utf-8", newline="\n"
+def render_readme(p: Progress, card_path: str) -> str:
+    """Bloco do README: card SVG + skill tree + missão atual."""
+    return "\n".join(
+        [
+            START_MARKER,
+            "<!-- Bloco gerado por `uv run ai-lab progress --write`. Não edite à mão: edite progress/progress.toml. -->",
+            "",
+            f'<p align="center"><img src="{card_path}" alt="Painel de progresso do AI-Lab" width="100%"></p>',
+            "",
+            "<details>",
+            "<summary><b>🗺️ Skill tree e missão atual</b></summary>",
+            "",
+            render_skill_tree(p),
+            "",
+            render_next(p),
+            "",
+            "</details>",
+            END_MARKER,
+        ]
     )
+
+
+def write_text_lf(path: Path, content: str) -> None:
+    # UTF-8 e LF explícitos: no Windows o padrão seria cp1252 e CRLF.
+    path.write_text(content, encoding="utf-8", newline="\n")
+
+
+def write_block(md_path: Path, block: str) -> None:
+    write_text_lf(md_path, replace_block(md_path.read_text(encoding="utf-8"), block))

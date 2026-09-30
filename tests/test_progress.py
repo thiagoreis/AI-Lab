@@ -121,12 +121,13 @@ def test_replace_block_requires_markers() -> None:
         progress.replace_block("sem marcadores", "x")
 
 
-def test_write_markdown_uses_utf8_and_lf(tmp_path: Path) -> None:
+def test_write_block_uses_utf8_and_lf(tmp_path: Path) -> None:
     md = tmp_path / "PROGRESS.md"
     md.write_bytes(
         f"# Título 🎮\n{progress.START_MARKER}\n{progress.END_MARKER}\nfim\n".encode()
     )
-    progress.write_markdown(progress.parse(make_raw()), md, date(2026, 9, 30))
+    block = progress.render_markdown(progress.parse(make_raw()), date(2026, 9, 30))
+    progress.write_block(md, block)
     raw = md.read_bytes()
     assert b"\r\n" not in raw
     text = raw.decode("utf-8")
