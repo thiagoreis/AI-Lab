@@ -1,0 +1,164 @@
+# Fonte da verdade do progresso gamificado do AI-Lab.
+#
+# Regras:
+# - XP vem apenas de atividades concluídas (`done = true`), pesadas por tipo.
+# - Uma aula só é concluída quando sua atividade `boss` (arguição sem consulta) é vencida.
+# - Uma aula só é desbloqueada quando todas as aulas em `requires` estão concluídas.
+# - Badges são concedidos pelo tutor, registrando a data em `earned`.
+#
+# Após editar: `uv run ai-lab progress --write` para regenerar o painel em PROGRESS.md.
+
+[xp]
+exercise = 10    # exercício da aula executado e registrado
+experiment = 20  # experimento com evidência (gráfico, tabela, análise)
+boss = 50        # boss fight: explicar o critério da aula sem consultar material
+milestone = 100  # marco de projeto entregue
+
+# Níveis por XP acumulado. `min_xp` precisa estar em ordem crescente.
+[[levels]]
+min_xp = 0
+title = "Aprendiz de Gradiente"
+
+[[levels]]
+min_xp = 300
+title = "Domador de Vetores"
+
+[[levels]]
+min_xp = 800
+title = "Artesão de Modelos"
+
+[[levels]]
+min_xp = 1600
+title = "Engenheiro de Redes Neurais"
+
+[[levels]]
+min_xp = 2800
+title = "Mestre da Atenção"
+
+[[levels]]
+min_xp = 4500
+title = "Arquiteto de Agentes"
+
+[[levels]]
+min_xp = 7000
+title = "AI Architect"
+
+# Etapas espelham ROADMAP-IA.md. Etapas sem aulas cadastradas aparecem como bloqueadas.
+[[stages]]
+id = 1
+name = "AI Foundations"
+
+[[stages]]
+id = 2
+name = "Machine Learning + Deep Learning"
+
+[[stages]]
+id = 3
+name = "Transformers + LLMs"
+
+[[stages]]
+id = 4
+name = "RAG + Agents"
+
+[[stages]]
+id = 5
+name = "MLOps + LLMOps"
+
+[[stages]]
+id = 6
+name = "AI Architecture"
+
+# ---------------------------------------------------------------------------
+# Aulas
+# ---------------------------------------------------------------------------
+
+[[lessons]]
+id = "001"
+stage = 1
+title = "Como uma máquina aprende?"
+file = "lessons/001-how-machines-learn.md"
+requires = []
+
+[[lessons.activities]]
+kind = "exercise"
+title = "Prever o comportamento de um learning rate muito grande antes de testar"
+done = false
+
+[[lessons.activities]]
+kind = "exercise"
+title = "Comparar learning_rate 0.1, 0.01 e 0.001"
+done = false
+
+[[lessons.activities]]
+kind = "exercise"
+title = "Trocar o dataset para x = 5, y = 25"
+done = false
+
+[[lessons.activities]]
+kind = "exercise"
+title = "Explicar por que o learning rate é necessário"
+done = false
+
+[[lessons.activities]]
+kind = "experiment"
+title = "Plotar curvas de loss dos três learning rates no mesmo gráfico"
+done = false
+
+[[lessons.activities]]
+kind = "boss"
+title = "Explicar sem consulta: feature, target, modelo, loss, gradiente e learning rate"
+done = false
+
+[[lessons]]
+id = "002"
+stage = 1
+title = "Álgebra Linear aplicada à IA"
+file = "lessons/002-linear-algebra.md"
+requires = ["001"]
+
+[[lessons.activities]]
+kind = "experiment"
+title = "Implementar regressão linear com múltiplas variáveis"
+done = false
+
+[[lessons.activities]]
+kind = "boss"
+title = "Explicar vetor, matriz, produto escalar e multiplicação de matrizes em modelos de ML"
+done = false
+
+# ---------------------------------------------------------------------------
+# Badges — conquistas concretas. Sem `earned`, o badge aparece como "???".
+# ---------------------------------------------------------------------------
+
+[[badges]]
+id = "primeiro-loop"
+name = "Primeiro Loop"
+description = "Rodar e registrar o primeiro loop de treinamento."
+
+[[badges]]
+id = "divergencia-controlada"
+name = "Divergência Controlada"
+description = "Fazer o gradient descent divergir de propósito e explicar a causa."
+
+[[badges]]
+id = "from-scratch"
+name = "From Scratch"
+description = "Implementar sem biblioteca algo que depois será usado via biblioteca."
+
+[[badges]]
+id = "cacador-de-leakage"
+name = "Caçador de Leakage"
+description = "Encontrar e corrigir um data leakage."
+
+[[badges]]
+id = "boss-slayer"
+name = "Boss Slayer"
+description = "Vencer o primeiro boss fight."
+
+# ---------------------------------------------------------------------------
+# Sessões de estudo — base do ritmo semanal. Uma entrada por sessão relevante.
+# ---------------------------------------------------------------------------
+
+[[sessions]]
+date = 2026-09-30
+note = "Análise do laboratório e criação do sistema de progresso gamificado."

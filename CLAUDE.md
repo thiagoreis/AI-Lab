@@ -80,4 +80,12 @@ Ao terminar uma sessão relevante, atualizar `PROGRESS.md` com:
 - dificuldades encontradas;
 - próximos passos concretos.
 
+Progresso gamificado:
+- o estado estruturado (atividades, XP, badges, sessões) vive em `progress/progress.toml`;
+- marque `done = true` apenas com evidência (código executado, experimento registrado);
+- o `boss` de uma aula só é marcado após arguição sem consulta conduzida pelo tutor;
+- badges são concedidos pelo tutor, com data em `earned`;
+- registre cada sessão relevante em `[[sessions]]`;
+- depois de editar, rode `uv run ai-lab progress --write` e `uv run pytest`.
+
 Não reescreva meu progresso histórico sem necessidade. Prefira registrar evolução incremental.

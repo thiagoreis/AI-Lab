@@ -33,8 +33,22 @@ AI-Lab/
 ├── ROADMAP-IA.md
 ├── PROGRESS.md
 ├── README.md
-└── lessons/
-    └── 001-how-machines-learn.md
+├── pyproject.toml
+├── lessons/
+│   └── 001-how-machines-learn.md
+├── progress/
+│   └── progress.toml        # fonte da verdade do progresso gamificado
+├── src/ai_lab/
+│   └── progress.py          # XP, níveis, skill tree e painel
+└── tests/
+```
+
+## Progresso gamificado
+
+```bash
+uv run ai-lab progress          # painel no terminal
+uv run ai-lab progress --write  # regenera o painel em PROGRESS.md
+uv run pytest                   # valida dados e regras
 ```
 
 ## GitHub público
