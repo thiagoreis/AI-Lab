@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="661" viewBox="0 0 880 661" role="img" aria-label="AI-Lab — Nível 1 · Aprendiz de Gradiente · 0 XP">
+<title>AI-Lab — Nível 1 · Aprendiz de Gradiente · 0 XP</title>
+<style>
+  .bg { fill: #fcfcfb; stroke: #e4e3df; }
+  .tile { fill: #f3f2ef; }
+  .t1 { fill: #0b0b0b; }
+  .t2 { fill: #52514e; }
+  .track { fill: #cde2fb; }
+  .fill { fill: #2a78d6; }
+  .line { stroke: #d6d5d0; }
+  .line-done { stroke: #0ca30c; }
+  .node-done { fill: #0ca30c; }
+  .node-current { fill: #2a78d6; }
+  .halo { fill: #2a78d6; opacity: .18; }
+  .node-locked { fill: #fcfcfb; stroke: #b5b4ae; }
+  .icon-locked { stroke: #8a8983; fill: none; }
+  .badge-on { fill: #fab219; }
+  .badge-off { fill: none; stroke: #b5b4ae; stroke-dasharray: 4 3; }
+  text { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #1a1a19; stroke: #383835; }
+    .tile { fill: #262624; }
+    .t1 { fill: #ffffff; }
+    .t2 { fill: #c3c2b7; }
+    .track { fill: #3a3a37; }
+    .fill { fill: #3987e5; }
+    .line { stroke: #4a4a46; }
+    .node-current { fill: #3987e5; }
+    .halo { fill: #3987e5; }
+    .node-locked { fill: #1a1a19; stroke: #6b6a65; }
+    .icon-locked { stroke: #8f8e87; }
+    .badge-off { stroke: #6b6a65; }
+  }
+</style>
+<rect x="0.5" y="0.5" width="879" height="660" rx="16" class="bg"/>
+<text x="32.0" y="44.0" class="t2" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.2">AI-LAB · FORMAÇÃO EM AI ENGINEERING</text>
+<text x="32.0" y="88.0" class="t1" font-size="40" font-weight="700" text-anchor="start">Nível 1</text>
+<text x="202.0" y="88.0" class="t2" font-size="22" font-weight="500" text-anchor="start">Aprendiz de Gradiente</text>
+<rect x="32" y="112" width="816" height="10" rx="5.0" class="track"/>
+<text x="32.0" y="142.0" class="t1" font-size="13" font-weight="600" text-anchor="start">0 / 300 XP</text>
+<text x="848.0" y="142.0" class="t2" font-size="13" font-weight="400" text-anchor="end">próximo: Domador de Vetores</text>
+<rect x="32.0" y="168" width="192.0" height="76" rx="10" class="tile"/>
+<text x="48.0" y="206.0" class="t1" font-size="28" font-weight="700" text-anchor="start">0</text>
+<text x="48.0" y="228.0" class="t2" font-size="12" font-weight="400" text-anchor="start">XP total</text>
+<rect x="240.0" y="168" width="192.0" height="76" rx="10" class="tile"/>
+<text x="256.0" y="206.0" class="t1" font-size="28" font-weight="700" text-anchor="start">0/2</text>
+<text x="256.0" y="228.0" class="t2" font-size="12" font-weight="400" text-anchor="start">aulas concluídas</text>
+<rect x="448.0" y="168" width="192.0" height="76" rx="10" class="tile"/>
+<text x="464.0" y="206.0" class="t1" font-size="28" font-weight="700" text-anchor="start">0/5</text>
+<text x="464.0" y="228.0" class="t2" font-size="12" font-weight="400" text-anchor="start">badges</text>
+<rect x="656.0" y="168" width="192.0" height="76" rx="10" class="tile"/>
+<text x="672.0" y="206.0" class="t1" font-size="28" font-weight="700" text-anchor="start">1</text>
+<text x="672.0" y="228.0" class="t2" font-size="12" font-weight="400" text-anchor="start">sessões (últimas 4 semanas)</text>
+<text x="32.0" y="280.0" class="t1" font-size="15" font-weight="600" text-anchor="start">Jornada</text>
+<line x1="113.0" y1="320" x2="210.2" y2="320" class="line" stroke-width="3" stroke-linecap="round"/>
+<line x1="252.2" y1="320" x2="349.4" y2="320" class="line" stroke-width="3" stroke-linecap="round"/>
+<line x1="391.4" y1="320" x2="488.6" y2="320" class="line" stroke-width="3" stroke-linecap="round"/>
+<line x1="530.6" y1="320" x2="627.8" y2="320" class="line" stroke-width="3" stroke-linecap="round"/>
+<line x1="669.8" y1="320" x2="767.0" y2="320" class="line" stroke-width="3" stroke-linecap="round"/>
+<circle cx="92.0" cy="320" r="24" class="halo"/>
+<circle cx="92.0" cy="320" r="17" class="node-current"/>
+<text x="92.0" y="326" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">1</text>
+<text x="92.0" y="363.0" class="t2" font-size="11" font-weight="600" text-anchor="middle">Etapa 1</text>
+<text x="92.0" y="381.0" class="t1" font-size="13" font-weight="600" text-anchor="middle">AI Foundations</text>
+<text x="92.0" y="399.0" class="t2" font-size="11" font-weight="400" text-anchor="middle">0/2 aulas</text>
+<circle cx="231.2" cy="320" r="17" class="node-locked" stroke-width="2"/>
+<path d="M227.2 319 v-3 a4 4 0 0 1 8 0 v3" class="icon-locked" stroke-width="2"/><rect x="224.7" y="319" width="13" height="9" rx="2" class="icon-locked" stroke-width="2"/>
+<text x="231.2" y="363.0" class="t2" font-size="11" font-weight="600" text-anchor="middle">Etapa 2</text>
+<text x="231.2" y="381.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">Machine Learning</text>
+<text x="231.2" y="397.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">+ Deep Learning</text>
+<circle cx="370.4" cy="320" r="17" class="node-locked" stroke-width="2"/>
+<path d="M366.4 319 v-3 a4 4 0 0 1 8 0 v3" class="icon-locked" stroke-width="2"/><rect x="363.9" y="319" width="13" height="9" rx="2" class="icon-locked" stroke-width="2"/>
+<text x="370.4" y="363.0" class="t2" font-size="11" font-weight="600" text-anchor="middle">Etapa 3</text>
+<text x="370.4" y="381.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">Transformers</text>
+<text x="370.4" y="397.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">+ LLMs</text>
+<circle cx="509.6" cy="320" r="17" class="node-locked" stroke-width="2"/>
+<path d="M505.6 319 v-3 a4 4 0 0 1 8 0 v3" class="icon-locked" stroke-width="2"/><rect x="503.1" y="319" width="13" height="9" rx="2" class="icon-locked" stroke-width="2"/>
+<text x="509.6" y="363.0" class="t2" font-size="11" font-weight="600" text-anchor="middle">Etapa 4</text>
+<text x="509.6" y="381.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">RAG</text>
+<text x="509.6" y="397.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">+ Agents</text>
+<circle cx="648.8" cy="320" r="17" class="node-locked" stroke-width="2"/>
+<path d="M644.8 319 v-3 a4 4 0 0 1 8 0 v3" class="icon-locked" stroke-width="2"/><rect x="642.3" y="319" width="13" height="9" rx="2" class="icon-locked" stroke-width="2"/>
+<text x="648.8" y="363.0" class="t2" font-size="11" font-weight="600" text-anchor="middle">Etapa 5</text>
+<text x="648.8" y="381.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">MLOps</text>
+<text x="648.8" y="397.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">+ LLMOps</text>
+<circle cx="788.0" cy="320" r="17" class="node-locked" stroke-width="2"/>
+<path d="M784.0 319 v-3 a4 4 0 0 1 8 0 v3" class="icon-locked" stroke-width="2"/><rect x="781.5" y="319" width="13" height="9" rx="2" class="icon-locked" stroke-width="2"/>
+<text x="788.0" y="363.0" class="t2" font-size="11" font-weight="600" text-anchor="middle">Etapa 6</text>
+<text x="788.0" y="381.0" class="t1" font-size="13" font-weight="400" text-anchor="middle">AI Architecture</text>
+<rect x="32" y="433" width="816" height="74" rx="10" class="tile"/>
+<text x="50.0" y="461.0" class="t2" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1.2">MISSÃO ATUAL</text>
+<text x="50.0" y="485.0" class="t1" font-size="17" font-weight="600" text-anchor="start">Aula 001 — Como uma máquina aprende?</text>
+<text x="830.0" y="461.0" class="t2" font-size="12" font-weight="400" text-anchor="end">0/6 atividades</text>
+<rect x="630" y="477" width="200" height="8" rx="4.0" class="track"/>
+<text x="32.0" y="543.0" class="t1" font-size="15" font-weight="600" text-anchor="start">Badges · 0/5</text>
+<circle cx="113.6" cy="587" r="22" class="badge-off" stroke-width="2"/>
+<text x="113.6" y="593.0" class="t2" font-size="18" font-weight="700" text-anchor="middle">?</text>
+<text x="113.6" y="629.0" class="t2" font-size="12" font-weight="400" text-anchor="middle">???</text>
+<circle cx="276.8" cy="587" r="22" class="badge-off" stroke-width="2"/>
+<text x="276.8" y="593.0" class="t2" font-size="18" font-weight="700" text-anchor="middle">?</text>
+<text x="276.8" y="629.0" class="t2" font-size="12" font-weight="400" text-anchor="middle">???</text>
+<circle cx="440.0" cy="587" r="22" class="badge-off" stroke-width="2"/>
+<text x="440.0" y="593.0" class="t2" font-size="18" font-weight="700" text-anchor="middle">?</text>
+<text x="440.0" y="629.0" class="t2" font-size="12" font-weight="400" text-anchor="middle">???</text>
+<circle cx="603.2" cy="587" r="22" class="badge-off" stroke-width="2"/>
+<text x="603.2" y="593.0" class="t2" font-size="18" font-weight="700" text-anchor="middle">?</text>
+<text x="603.2" y="629.0" class="t2" font-size="12" font-weight="400" text-anchor="middle">???</text>
+<circle cx="766.4" cy="587" r="22" class="badge-off" stroke-width="2"/>
+<text x="766.4" y="593.0" class="t2" font-size="18" font-weight="700" text-anchor="middle">?</text>
+<text x="766.4" y="629.0" class="t2" font-size="12" font-weight="400" text-anchor="middle">???</text>
+</svg>
