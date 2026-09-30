@@ -119,3 +119,15 @@ def test_replace_block_preserves_surrounding_text() -> None:
 def test_replace_block_requires_markers() -> None:
     with pytest.raises(ValueError):
         progress.replace_block("sem marcadores", "x")
+
+
+def test_write_markdown_uses_utf8_and_lf(tmp_path: Path) -> None:
+    md = tmp_path / "PROGRESS.md"
+    md.write_bytes(
+        f"# Título 🎮\n{progress.START_MARKER}\n{progress.END_MARKER}\nfim\n".encode()
+    )
+    progress.write_markdown(progress.parse(make_raw()), md, date(2026, 9, 30))
+    raw = md.read_bytes()
+    assert b"\r\n" not in raw
+    text = raw.decode("utf-8")
+    assert text.startswith("# Título 🎮") and "Nível 1" in text and text.endswith("fim\n")

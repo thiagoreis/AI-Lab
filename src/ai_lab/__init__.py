@@ -1,4 +1,5 @@
 import argparse
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -19,6 +20,9 @@ def main() -> None:
     prog.add_argument("--markdown", type=Path, default=Path("PROGRESS.md"))
 
     args = parser.parse_args()
+    # Garante emojis e barras no console do Windows mesmo com saída redirecionada.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     if args.command == "progress":
         data = progress.load(args.file)
         today = date.today()

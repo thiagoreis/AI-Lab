@@ -334,4 +334,8 @@ def replace_block(document: str, block: str) -> str:
 
 
 def write_markdown(p: Progress, md_path: Path, today: date) -> None:
-    md_path.write_text(replace_block(md_path.read_text(), render_markdown(p, today)))
+    # UTF-8 e LF explícitos: no Windows o padrão seria cp1252 e CRLF.
+    document = md_path.read_text(encoding="utf-8")
+    md_path.write_text(
+        replace_block(document, render_markdown(p, today)), encoding="utf-8", newline="\n"
+    )
