@@ -1,0 +1,7 @@
+# LF em todos os sistemas: o gerador de progresso grava LF, e o Windows
+# (core.autocrlf=true) converteria para CRLF, gerando diffs fantasmas.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ipynb text eol=lf
